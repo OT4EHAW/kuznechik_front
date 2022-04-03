@@ -3,7 +3,9 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
-
+  router: {
+    base: 'https://github.com/OT4EHAW/kuznechik_front.git/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: 'Менеджер паролей',
