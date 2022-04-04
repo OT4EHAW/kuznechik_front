@@ -4,8 +4,9 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
   router: {
-    base: 'https://github.com/OT4EHAW/kuznechik_front.git/'
+    base: '/kuznechik_front/'
   },
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: 'Менеджер паролей',
@@ -20,7 +21,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/lock.png' }
+      { rel: 'icon', type: 'image/x-icon', href: 'lock.png' }
     ]
   },
 
