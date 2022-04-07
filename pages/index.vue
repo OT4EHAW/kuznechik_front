@@ -26,7 +26,20 @@
 </template>
 
 <script>
+import {IndexedDB, storageName, testPasswordRecord, testProfileRecord} from "../api/idb";
+
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  mounted() {
+    const dbHelper = new IndexedDB()
+    dbHelper.initDB().then(
+      db => {
+        db.delete(storageName.password, testPasswordRecord.id)
+        db.delete(storageName.profile, testProfileRecord.id)
+        db.add(storageName.password, testPasswordRecord)
+        db.add(storageName.profile, testProfileRecord)
+      }
+    )
+  }
 }
 </script>

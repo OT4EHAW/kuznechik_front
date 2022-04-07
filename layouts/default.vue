@@ -5,7 +5,7 @@
       fixed
       app
     >
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title v-text="title"  to="/"/>
       <v-spacer />
       <v-btn
         text
